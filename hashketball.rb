@@ -244,7 +244,7 @@ end
 
 def players_stats(player_name)
   hash = game_hash
-   result = nil
+   result = {}
   game_hash[:home][:players].each do |el|
     el.each do |key, val|
       if key == player_name
