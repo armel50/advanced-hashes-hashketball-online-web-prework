@@ -418,6 +418,43 @@ end
 
 def long_name_steals_a_ton?
   name = player_with_longest_name
+   hash = game_hash
+   array = []
+result =""
+  hash[:home][:players].each do |el|
+    el.each do |key, val|
+     array.push(val[:points])
+    end
+  end
+
+  hash[:away][:players].each do |el|
+    el.each do |key, val|
+     array.push(val[:points])
+    end
+  end
+  #====================================
+  #====================================
+ array =  array.sort
+ array.last
+
+ hash[:home][:players].each do |el|
+   el.each do |key,val|
+    if val[:points] == array.last
+        result= key
+    end
+   end
+ end
+
+
+ hash[:away][:players].each do |el|
+   el.each do |key,val|
+    if val[:points] == array.last
+        result= key
+    end
+   end
+ end
+ result
+  
   if 
   end
 end
