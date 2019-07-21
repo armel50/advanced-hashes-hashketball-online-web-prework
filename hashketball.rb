@@ -346,12 +346,30 @@ end
 
 
 def winning_team
-  total_for_home = 0 
-  total_for_home = 0
+   total_for_home = 0 
+  total_for_away = 0
   
+result =""
   hash[:home][:players].each do |el|
-    
-  end
+   el.each do |key, val|
+    total_for_home += val[:points]
+   end
+
+ end
+
+  hash[:away][:players].each do |el|
+   el.each do |key, val|
+    total_for_away += val[:points]
+   end
+
+ end
+
+ if total_for_away > total_for_home
+  result  =hash[:away][:team_name]
+  else
+  result = hash[:home][:team_name]
+ end 
+ result
 end
 
 
