@@ -438,8 +438,12 @@ def long_name_steals_a_ton?
  array.last
 
   
-  if hash[:]
-  end
+   hash[:away][:players][1].each do |key, val|
+      if val[:steals] == array.last
+        return true
+      end
+   end
+
 end
 
 
