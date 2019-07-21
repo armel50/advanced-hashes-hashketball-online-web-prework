@@ -269,16 +269,16 @@ end
 def big_shoe_rebounds
   hash = game_hash
    array = []
-result =""
+result =0
   hash[:home][:players].each do |el|
     el.each do |key, val|
-     array.push(val[:points])
+     array.push(val[:shoe])
     end
   end
 
   hash[:away][:players].each do |el|
     el.each do |key, val|
-     array.push(val[:points])
+     array.push(val[:shoe])
     end
   end
   #====================================
