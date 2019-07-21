@@ -375,7 +375,44 @@ end
 
 
 def player_with_longest_name 
-  
+  array = []
+result =""
+  hash[:home][:players].each do |el|
+   el.each do |key, val|
+     array.push(key.length)
+   end
+
+ end
+
+  hash[:away][:players].each do |el|
+   el.each do |key, val|
+    array.push(key.length)
+   end
+
+ end
+ array = array.sort
+ #========================
+ #========================
+   hash[:home][:players].each do |el|
+   el.each do |key, val|
+     if key.length == array.last
+      result = key
+     end
+   end
+
+ end
+
+  hash[:away][:players].each do |el|
+   el.each do |key, val|
+    if key.length == array.last
+      result = key
+    end
+   end
+
+ end
+
+ 
+ result
 end
 
 
