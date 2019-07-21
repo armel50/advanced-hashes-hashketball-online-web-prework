@@ -289,7 +289,7 @@ result =0
  hash[:home][:players].each do |el|
    el.each do |key,val|
     if val[:shoe] == array.last
-        p val[:rebounds]
+        result= val[:rebounds]
     end
    end
  end
@@ -298,7 +298,7 @@ result =0
  hash[:away][:players].each do |el|
    el.each do |key,val|
     if val[:shoe] == array.last
-        p val[:rebounds]
+        result= val[:rebounds]
     end
    end
  end
