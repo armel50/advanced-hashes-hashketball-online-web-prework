@@ -345,6 +345,16 @@ result =""
 end
 
 
+def winning_team
+  total_for_home = 0 
+  total_for_home = 0
+  
+  hash[:home][:players].each do |el|
+    
+  end
+end
+
+
 
 
 
