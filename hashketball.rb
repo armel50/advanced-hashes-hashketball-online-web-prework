@@ -375,6 +375,7 @@ end
 
 
 def player_with_longest_name 
+  hash = game_hash
   array = []
 result =""
   hash[:home][:players].each do |el|
