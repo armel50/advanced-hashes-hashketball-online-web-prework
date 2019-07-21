@@ -269,6 +269,45 @@ end
 def big_shoe_rebounds
   hash = game_hash
    array = []
+result =""
+  hash[:home][:players].each do |el|
+    el.each do |key, val|
+     array.push(val[:points])
+    end
+  end
+
+  hash[:away][:players].each do |el|
+    el.each do |key, val|
+     array.push(val[:points])
+    end
+  end
+  #====================================
+  #====================================
+ array =  array.sort
+ array.last
+
+ hash[:home][:players].each do |el|
+   el.each do |key,val|
+    if val[:shoe] == array.last
+        result= val[:rebounds]
+    end
+   end
+ end
+
+
+ hash[:away][:players].each do |el|
+   el.each do |key,val|
+    if val[:shoe] == array.last
+        result= val[:rebounds]
+    end
+   end
+ end
+ result
+end
+
+def most_points_scored
+   hash = game_hash
+   array = []
 result =0
   hash[:home][:players].each do |el|
     el.each do |key, val|
