@@ -420,7 +420,7 @@ def long_name_steals_a_ton?
   name = player_with_longest_name
    hash = game_hash
    array = []
-result =""
+
   hash[:home][:players].each do |el|
     el.each do |key, val|
      array.push(val[:points])
