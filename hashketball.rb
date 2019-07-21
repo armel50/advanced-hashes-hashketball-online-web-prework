@@ -423,13 +423,13 @@ def long_name_steals_a_ton?
 
   hash[:home][:players].each do |el|
     el.each do |key, val|
-     array.push(val[:points])
+     array.push(val[:steals])
     end
   end
 
   hash[:away][:players].each do |el|
     el.each do |key, val|
-     array.push(val[:points])
+     array.push(val[:steals])
     end
   end
   #====================================
@@ -437,25 +437,8 @@ def long_name_steals_a_ton?
  array =  array.sort
  array.last
 
- hash[:home][:players].each do |el|
-   el.each do |key,val|
-    if val[:points] == array.last
-        result= key
-    end
-   end
- end
-
-
- hash[:away][:players].each do |el|
-   el.each do |key,val|
-    if val[:points] == array.last
-        result= key
-    end
-   end
- end
- result
   
-  if 
+  if hash[:]
   end
 end
 
