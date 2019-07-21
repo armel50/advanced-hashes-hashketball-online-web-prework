@@ -242,7 +242,7 @@ end
 array.sort 
 end
 
-def players_stats(player_name)
+def player_stats(player_name)
   hash = game_hash
    result = {}
   game_hash[:home][:players].each do |el|
